@@ -1,7 +1,0 @@
-<nav class="social-nav">
-    <ul class="flat">
-        {{- range $index, $key := .Site.Params.Social -}}
-        <li><a href="{{ $key.url }}" title="{{ $key.name }}" target="_blank"><i data-feather="{{ $key.icon }}"></i></a></li>
-        {{- end -}}
-    </ul>
-</nav>
