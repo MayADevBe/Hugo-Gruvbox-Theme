@@ -1,0 +1,18 @@
+<footer>
+    <nav>
+        <ul class="flat">
+            <li>
+                <div id="copyright">{{ .Site.Copyright }}</div>
+            </li>
+            {{ range .Site.Menus.footer }}
+            <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            <li>
+                [Built with <a href="https://gohugo.io">Hugo</a>]
+            </li>
+        </ul>
+    </nav>
+    <script>feather.replace()</script>
+</footer>

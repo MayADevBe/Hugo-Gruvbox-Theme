@@ -1,0 +1,31 @@
+<header>
+    <base href="{{ .Site.BaseURL }}">
+    <div>
+        <h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+        <div class="site-info">
+            {{- if isset .Site.Params "description" -}}
+            <h2>{{ .Site.Params.Description | markdownify }}</h2>
+            {{- end -}}
+
+            <nav class="social-nav">
+                <ul class="flat">
+                    {{- range $index, $key := .Site.Params.Social -}}
+                    <li><a href="{{ $key.url }}" title="{{ $key.name }}" target="_blank"><i data-feather="{{ $key.icon }}"></i></a></li>
+                    {{- end -}}
+                    <li><a rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}/index.xml" title="{.Site.Title}"><i data-feather="rss"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <nav>
+            <ul class="flat">
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+
+    </div>
+</header>

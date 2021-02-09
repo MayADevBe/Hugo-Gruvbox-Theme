@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+
+    <body>
+        <div class="container">
+            {{ partial "header.html" . }}
+
+            <div class="content">
+                {{ if isset .Data "Term" }}
+                    <h1>Tag - "{{ .Data.Term }}"</h1>
+                {{ else }}
+                    <h1 class="page-title">All Articles</h1>
+                {{ end }}
+
+                {{ with .Content }}{{ . }}{{ end }}
+
+                <ul class="posts">
+                    {{ range .Data.Pages }} 
+                    <li class="post">
+                        <a href="{{ .RelPermalink  }}">{{ .Title }}</a>  <span class="post-metadata">{{ dateFormat "2006-01-02" .Date }} | <i data-feather="clock" style="width: 12px; height: 12px;"></i> {{ math.Round (div (countwords .Content) 220.0) }}min {{ if .Draft }} <span class="draft-label"> | DRAFT</span> {{ end }}</span>
+                    </li>
+                    {{end}}
+                </ul>
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+</html>

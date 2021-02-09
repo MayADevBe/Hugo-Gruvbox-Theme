@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+
+    <body>
+        <div class="container">
+            {{ partial "header.html" . }}
+
+            {{ with .Content }}{{ . }}{{ end }}
+
+            <div class="content">
+                <h2>Recent Posts</h2>
+                <div class="posts">
+                    {{ $pages := where .Site.RegularPages "Type" "in" "posts" }}
+				    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+				    {{ range $paginator.Pages }} 
+                    <div class="post">
+                        <div class="post-metadata">{{ dateFormat "2006-01-02" .Date }} | <i data-feather="clock" style="width: 12px; height: 12px;"></i> {{ math.Round (div (countwords .Content) 220.0) }}min {{ if .Draft }} <span class="draft-label">| DRAFT</span> {{ end }}</div>
+                        <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a> &mdash;
+                        <span class="description">
+                            {{ if isset .Params "description" }}
+                                {{ .Description }}
+                            {{ else }}
+                                {{ .Summary }}
+                            {{ end }}
+                        </span> 
+                    </div>
+                    {{end}}
+                    {{ template "partials/paginator.html" . }}
+                </div>
+            </div>
+            
+            {{ partial "footer.html" . }}
+        </div>
+    </body>
+</html>

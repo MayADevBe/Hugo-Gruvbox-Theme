@@ -1,0 +1,29 @@
+<head>
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/svg" href="{{ .Site.BaseURL }}ico/favicon.svg">
+
+    {{- $title := ( .Title ) -}}
+	{{- $siteTitle := ( .Site.Title ) -}}
+	{{- if .IsHome -}}
+	<title>{{ $siteTitle }} {{ if isset .Site.Params "subtitle" }}- {{ .Site.Params.Subtitle }}{{ end }} </title>
+	{{- else -}}
+	<title>{{ $title }} - {{ $siteTitle }}</title>
+	{{- end -}}
+    
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/syntax.css" />
+
+	<script src="https://unpkg.com/feather-icons"></script>
+
+	{{ range .AlternativeOutputFormats -}}
+    	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+
+	{{ template "_internal/twitter_cards.html" . }}
+
+</head>

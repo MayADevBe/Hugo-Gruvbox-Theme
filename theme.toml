@@ -1,0 +1,19 @@
+#see https://github.com/gohugoio/hugoThemes#themetoml for example
+
+name = "Hugo-Gruvbox-Theme"
+license = "MIT"
+licenselink = "https://github.com/MayADevBe/Hugo-Gruvbox-Theme/blob/main/LICENSE"
+description = "Simple personal blog/portfolio theme for Hugo"
+homepage = "https://mayadevbe.me/"
+tags = ["minimal", "blog", "responsive", "personal", "simple", "portfolio", "dark"]
+features = ["blog", "Responsive", "Social media links", "Syntax highlighting"]
+min_version = "0.59.1"
+
+[author]
+    name = "MayADevBe"
+    homepage = "https://mayadevbe.me/"
+
+[original]
+    author = "Vivek R"
+    homepage = "https://vivekr.net"
+    repo = "https://github.com/vividvilla/ezhil"

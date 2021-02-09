@@ -1,0 +1,295 @@
+:root {
+    --bg: #282828;
+    --red: #cc241d;
+    --green: #98971a;
+    --yellow: #d79921;
+    --blue: #458588;
+    --purple: #b16286;
+    --aqua: #689d6a;
+    --light-gray: #a89984;
+    --dark-gray: #928374;
+    --light-red: #fb4934;
+    --light-green: #b8bb26;
+    --light-yellow: #fabd3f;
+    --light-blue: #83a598;
+    --light-purple: #d3869b;
+    --light-agua: #8ec07c;
+    --fg: #ebdbb2;
+    --bg0_h: #1d2021;
+    --bg1: #3c3836;
+    --bg2: #504945;
+    --bg3: #665c54;
+    --bg4: #7c6f64;
+    --gray: #928374;
+    --orange: #d65d0e;
+    --bg0-s: #32302f;
+    --fg4: #a89984;
+    --fg3: #bdae93;
+    --fg2: #d5c4a1;
+    --fg1: #ebdbb2;
+    --fg0: #fbf1c7;
+    --light-orange: #fe8019;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    color: var(--fg0);
+    background-color: var(--bg);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.site-title {
+    margin-bottom: 0cm;
+}
+
+.site-title a {
+    text-decoration: none !important;
+    color: var(--red);
+}
+
+.site-title a:hover {
+    color: var(--light-red);
+}
+
+
+.site-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-info h2{
+    padding: 0px;
+    margin-top: 5px;
+    color: var(--fg);
+}
+
+nav {
+    margin-top: 10px;
+    border-top: 1px solid var(--fg3);
+}
+
+.social-nav {
+    border-top: 0px !important;
+}
+
+nav ul,
+nav li {
+    margin: 0;
+}
+
+nav ul.flat li {
+    margin-right: 10px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+ul {
+    padding-left: 15px;
+    list-style: disc inside;
+}
+
+ul.flat {
+    margin: 0;
+    padding: 0;
+}
+
+ul.flat li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 0;
+}
+
+.tags {
+    border-top: 0px !important;
+}
+
+.post-tags .tags a {
+    display: inline-block;
+    border: 1px solid var(--yellow);
+    border-radius: 4px;
+    padding: 0px 6px;
+    color: var(--yellow);
+    line-height: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+}
+
+.post-tags .tags a:hover {
+    color: var(--light-yellow)
+}
+
+.tag-cloud .tags a {
+    display: inline-block;
+    border: 1px solid var(--yellow);
+    border-radius: 4px;
+    padding: 0px 10px;
+    color: var(--yellow);
+    line-height: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 1px;
+}
+
+.tag-cloud .tags a:hover {
+    color: var(--light-yellow)
+}
+
+a{
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--green);   
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.75rem;
+    color: var(--red);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--yellow);
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+h5 {
+    font-size: 1rem;
+    color: var(--aqua);
+}
+
+h6 {
+    font-size: .9rem;
+    color: var(--purple);
+}
+
+.posts .post {
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.posts .post .post-metadata {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    color: var(--fg3);
+    margin-top: 10px;
+}
+
+.metadata{
+    margin: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--fg3);
+}
+
+.single-title {
+    margin-bottom: 10px;
+}
+
+.posts .post .post-title {
+    margin: 0px;
+}
+
+.draft-label{
+    color: var(--light-orange);
+    text-decoration: none;    
+}
+
+.markdown {
+    padding-left: 10px;
+}
+
+footer {
+    text-align: right;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
+
+footer nav {
+    margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin-top: 10px;
+    }
+}
+
+.errorpage {
+    margin-top: 20%;
+    color: var(--yellow);
+    text-align: center;
+}
+
+.content {
+    max-width: 800px !important;
+    margin: auto;
+}
+
+
+hr {
+    border: 1px solid var(--fg3);
+}
+
+blockquote {
+    padding: 5px;
+    background-color: var(--bg3);
+}
+
+code {
+    padding: 5px;
+    background-color: var(--bg0_h); 
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
