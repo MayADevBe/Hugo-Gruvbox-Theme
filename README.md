@@ -33,7 +33,7 @@ For more information checkout the [Hugo Installation Guide](https://gohugo.io/ge
 
 ## Configuration
 - Put a favicon in 'static\ico\favicon.svg'
-- 'config.toml':
+- 'config.toml' example:
 ```toml
 
 baseURL = "http://example.com/"
