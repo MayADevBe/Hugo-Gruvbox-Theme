@@ -1,5 +1,9 @@
 <head>
 
+	{{ if .Site.GoogleAnalytics }}
+		{{ template "_internal/google_analytics.html" . }}
+	{{ end }}
+
 	{{ if .Site.GoogleAnalyticsGA4 }}
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
