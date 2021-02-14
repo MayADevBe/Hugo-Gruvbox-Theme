@@ -46,10 +46,8 @@ copyright = "© Copyright Notice"
 [author]
   name = "Author Name"
 
-#Google Analytics Tracking ID
+#Google Analytics Tracking ID (or use 4 -> see under params)
 googleAnalytics = "UA-xxxxxxxxx-x"
-#Or Google Analytics Measurement id
-googleAnalyticsGA4 = "G-xxxxxxxxxx"
 
 #Number of posts shown on index page
 paginate = 5
@@ -57,6 +55,8 @@ paginate = 5
 [params]
     # Blog subtitle + For Twitter cards
     description = "A Blog about ..."
+    #Google Analytics Measurement id
+    googleAnalyticsGA4 = "G-xxxxxxxxxx"
 
 #Main Menu (below header)
 [[menu.main]]
