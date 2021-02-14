@@ -28,15 +28,9 @@
 	{{ template "_internal/twitter_cards.html" . }}
 	{{ template "_internal/opengraph.html" . }}
 
-	{{- if and .Site.GoogleAnalytics hugo.IsProduction }}
-		<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-		<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', '{{ .Site.GoogleAnalytics }}');
-		</script>
+	{{- if .Site.GoogleAnalytics }}
+		{{ template "_internal/google_analytics.html" . }}
+		{{ template "_internal/google_analytics_async.html" . }}
 	{{- end }}
 
 </head>
