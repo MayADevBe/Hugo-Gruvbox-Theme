@@ -46,7 +46,7 @@ copyright = "© Copyright Notice"
 [author]
   name = "Author Name"
 
-#Google Analytics Tracking ID (or use 4 -> see under params)
+#Google Analytics Tracking ID
 googleAnalytics = "UA-xxxxxxxxx-x"
 
 #Number of posts shown on index page
