@@ -55,8 +55,6 @@ paginate = 5
 [params]
     # Blog subtitle + For Twitter cards
     description = "A Blog about ..."
-    #Google Analytics Measurement id
-    googleAnalyticsGA4 = "G-xxxxxxxxxx"
 
 #Main Menu (below header)
 [[menu.main]]
