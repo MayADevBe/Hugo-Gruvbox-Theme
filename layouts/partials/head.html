@@ -4,7 +4,7 @@
 		{{ template "_internal/google_analytics.html" . }}
 	{{ end }}
 
-	{{ if .Site.GoogleAnalyticsGA4 }}
+	{{ if .Site..Params.GoogleAnalyticsGA4 }}
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
 		<script>
@@ -12,7 +12,7 @@
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 
-			gtag('config', '{{ .Site.GoogleAnalyticsGA4 }}');
+			gtag('config', '{{ .Site..Params.GoogleAnalyticsGA4 }}');
 		</script>	
 	{{ end }}
 
