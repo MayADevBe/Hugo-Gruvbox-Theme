@@ -13,6 +13,7 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - Twitter cards + opengraph support
 - Hugo RSS feed
 - Reading Time of Posts
+- Google Analytics
 
 ## Demo
 [View Website](https://mayadevbe.me/)
@@ -44,6 +45,9 @@ copyright = "© Copyright Notice"
 
 [author]
   name = "Author Name"
+
+#Google Analytics Tracking ID
+googleAnalytics = "UA-xxxxxxxxx-x"
 
 #Number of posts shown on index page
 paginate = 5
