@@ -26,22 +26,6 @@
 	{{ end -}}
 
 	{{ template "_internal/twitter_cards.html" . }}
-
-	{{- if .Site.GoogleAnalytics -}}
-		{{ template "_internal/google_analytics.html" . }}
-	{{- end -}}
-
-	{{ $ga := ( .Site.Params.GoogleAnalyticsGA4 ) }}
-	{{ if  isset .Site.Params "googleAnalyticsGA4" }}
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', '{{ $ga }}');
-		</script>	
-	{{ end }}
+	{{ template "_internal/opengraph.html" . }}
 
 </head>

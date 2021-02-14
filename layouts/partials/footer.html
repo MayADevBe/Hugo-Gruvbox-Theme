@@ -15,4 +15,7 @@
         </ul>
     </nav>
     <script>feather.replace()</script>
+    {{ if not .Site.IsServer }}
+        {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
 </footer>
