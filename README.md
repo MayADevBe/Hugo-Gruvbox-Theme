@@ -48,6 +48,8 @@ copyright = "© Copyright Notice"
 
 #Google Analytics Tracking ID
 googleAnalytics = "UA-xxxxxxxxx-x"
+#Or Google Analytics Measurement id
+googleAnalyticsGA4 = "G-xxxxxxxxxx"
 
 #Number of posts shown on index page
 paginate = 5

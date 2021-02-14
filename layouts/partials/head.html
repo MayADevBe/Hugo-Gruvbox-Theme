@@ -4,6 +4,18 @@
 		{{ template "_internal/google_analytics.html" . }}
 	{{ end }}
 
+	{{ if .site.GoogleAnalyticsGA4 }}
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', '{{ .site.GoogleAnalyticsGA4 }}');
+		</script>	
+	{{ end }}
+
     <meta charset="utf-8" />  
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
