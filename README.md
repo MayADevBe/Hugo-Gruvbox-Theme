@@ -14,6 +14,7 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - Hugo RSS feed
 - Reading Time of Posts
 - Google Analytics
+- Post Sharing Button
 
 ## Demo
 [View Website](https://mayadevbe.me/)
@@ -129,3 +130,4 @@ pygmentsCodefences = true
 - [Ezhil](https://github.com/vividvilla/ezhil)
 - [Gruvbox](https://github.com/morhetz/gruvbox)
 - [Feather Icons](https://feathericons.com/)
+- [Sharing Buttons](https://sharingbuttons.io/)

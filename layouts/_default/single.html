@@ -33,6 +33,12 @@
                     {{ end }}
                 </div>
 
+                <div>
+                    {{if not .Date.IsZero}}
+                        {{ partial "sharingbuttons.html"}}
+                    {{end}}
+                </div>
+
             </div>
             {{ partial "footer.html" . }}
         </div>
