@@ -1,0 +1,88 @@
+<style>
+    .relatedcontainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+        margin-top: 0px;
+    }
+
+    .relateditem {  
+        display: block;
+        color: var(--fg);
+
+        max-width: 30%;
+        padding: 2%;
+        height: auto;
+        margin: 2%;
+
+        box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,0.5);
+        transition: 0.3s;
+        border-radius: 0.5rem;
+    }
+
+    .relateditem:hover {
+        background-color: var(--bg1);
+        color: var(--fg);
+    }   
+
+    .relateditem p {
+        text-overflow: ellipsis;
+        margin: 0.5rem;
+    }
+
+    .relateditem h6 {
+        font-size: 1.2rem;
+        margin: 0.5rem;
+        color: var(--red);
+    }
+
+    .related {
+        border-top: 1px dashed var(--fg);
+        margin-top: 2rem;
+    }
+
+    .related h5 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    @media only screen and (max-width: 640px){
+        .relateditem{
+            min-width: 60%;
+        }
+    }
+
+    @media only screen and (max-device-width: 640px){
+        .relateditem{
+            min-width: 60%;
+        }
+    }
+</style>
+
+{{ if .Site.Params.enableRelatedPosts }}
+    {{ $related := .Site.RegularPages.Related . | first (.Site.Params.relatedPostsNumber | default 5) }}
+    {{ with $related }}
+    <div class="related">
+        <h5>Related Content:</h5> 
+        <div class="relatedcontainer">
+            {{ range . }}
+                <a class="relateditem" href="{{ .RelPermalink }}">
+                    <div class="card-info">
+                        <h6>{{ .Title }}</h6>
+                        <p>
+                            {{ if isset .Params "description" }}
+                                {{ .Description }}
+                            {{ else }}
+                                {{ .Summary }}
+                            {{ end }}
+                        </p>
+                    </div>
+                </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+{{ end }}

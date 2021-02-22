@@ -9,15 +9,13 @@
             <div class="content">
 
                 <div>
-                    <h1 class="single-title">{{.Title}}</h1>
-                    {{if not .Date.IsZero}}
-                    <p class="metadata">Published - {{ dateFormat "2006-01-02" .Date }} | <i data-feather="clock" style="width: 12px; height: 12px;"></i> {{ math.Round (div (countwords .Content) 220.0) }}min {{ if .Draft }} <span class="draft-label">| DRAFT</span> {{ end }}</p>
-                    {{end}}
+                    <h1 class="single-title">{{.Title}}</h1>   
+                    <p class="metadata">{{if not .Date.IsZero}} Published - {{ dateFormat "2006-01-02" .Date }} | {{end}} <i data-feather="clock" style="width: 12px; height: 12px;"></i> {{ math.Round (div (countwords .Content) 220.0) }}min {{ if .Draft }} <span class="draft-label">| DRAFT</span> {{ end }}</p>
                 </div>
 
-                <div class="markdown">
+                <article class="markdown">
                     {{ .Content }}
-                </div>
+                </article>
 
                 <div class="post-tags">
                     {{ if ne .Type "page" }}
@@ -34,11 +32,17 @@
                 </div>
 
                 <div>
-                    {{if not .Date.IsZero}}
+                    {{ if eq .Section "posts" }}
                         {{ partial "sharingbuttons.html" . }}
                     {{end}}
                 </div>
 
+
+                {{ if eq .Section "posts" }}
+                    {{ partial "related.html" . }}
+                {{ end }}
+
+                
             </div>
             {{ partial "footer.html" . }}
         </div>

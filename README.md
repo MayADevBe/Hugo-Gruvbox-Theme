@@ -55,6 +55,9 @@ paginate = 5
     description = "A Blog about ..."
     #Google Analytics Tracking ID
     googleAnalytics = "UA-xxxxxxxxx-x"
+    # Related Posts
+    enableRelatedPosts = true
+    relatedPostsNumber = 2
 
 #Main Menu (below header)
 [[menu.main]]
@@ -122,6 +125,20 @@ pygmentsCodefences = true
     lineNumbersInTable = true
     tabWidth = 4
     noClasses = false
+
+#related config
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 ```
 
