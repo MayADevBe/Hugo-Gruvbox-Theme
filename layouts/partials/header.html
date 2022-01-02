@@ -12,11 +12,11 @@
                     {{- range $index, $key := .Site.Params.Social -}}
                     <li><a href="{{ $key.url }}" title="{{ $key.name }}" target="_blank"><i data-feather="{{ $key.icon }}"></i></a></li>
                     {{- end -}}
-                    <li><a rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}/index.xml" title="{.Site.Title}"><i data-feather="rss"></i></a></li>
+                    <li><a rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="{.Site.Title}"><i data-feather="rss"></i></a></li>
                 </ul>
             </nav>
         </div>
-        
+
         <nav>
             <ul class="flat">
                 {{ range .Site.Menus.main }}
