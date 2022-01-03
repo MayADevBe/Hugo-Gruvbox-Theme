@@ -20,6 +20,8 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 [View Website](https://mayadevbe.me/)
 ![Screenshot](images/screenshot.PNG "Gruvebox Theme")
 
+[Erik Zaadis Blog](https://erikzaadi.com/) is now also using this theme.
+
 ## Installation
 - clone
     From the Hugo-Site folder
