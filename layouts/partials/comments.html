@@ -1,0 +1,20 @@
+{{- if isset .Site.Params "commentRepo" -}}
+        <style>
+        .related {
+                border-top: 1px dashed var(--fg);
+                margin-top: 2rem;
+        }
+        </style>
+
+        <div class="related">
+                <h5>Comments:</h5>
+        </div>
+
+        <script src="https://utteranc.es/client.js"
+                repo={{ .Site.Params.CommentRepo }}
+                issue-term="pathname"
+                theme="gruvbox-dark"
+                crossorigin="anonymous"
+                async>
+        </script>
+{{- end -}}

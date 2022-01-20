@@ -37,6 +37,9 @@
                     {{end}}
                 </div>
 
+                {{ if eq .Section "posts" }}
+                    {{ partial "comments.html" . }}
+                {{ end }}
 
                 {{ if eq .Section "posts" }}
                     {{ partial "related.html" . }}

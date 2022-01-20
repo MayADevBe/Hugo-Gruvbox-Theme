@@ -15,6 +15,7 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - Reading Time of Posts
 - Google Analytics
 - Post Sharing Button
+- Utterances Comments Feature support
 
 ## Demo
 [View Website](https://mayadevbe.me/)
@@ -60,6 +61,8 @@ paginate = 5
     # Related Posts
     enableRelatedPosts = true
     relatedPostsNumber = 2
+    #For Utterances Comments Feature - need to add repo
+    commentRepo = "GithubName/PublicRepoName"
 
 #Main Menu (below header)
 [[menu.main]]
@@ -149,3 +152,4 @@ pygmentsCodefences = true
 - [Gruvbox](https://github.com/morhetz/gruvbox)
 - [Feather Icons](https://feathericons.com/)
 - [Sharing Buttons](https://sharingbuttons.io/)
+- [Utterances](https://github.com/utterance/utterances)
