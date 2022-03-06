@@ -153,7 +153,7 @@ a{
 }
 
 a:hover{
-    color: var(--green);   
+    color: var(--green);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -220,7 +220,7 @@ h6 {
 
 .draft-label{
     color: var(--light-orange);
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .markdown {
@@ -285,8 +285,7 @@ blockquote {
 }
 
 code {
-    padding: 5px;
-    background-color: var(--bg0_h); 
+    background-color: var(--bg0_h);
 }
 
 img {
