@@ -263,6 +263,12 @@ footer nav {
     }
 }
 
+@media (max-width: 600px){
+    body{
+        font-size: 0.8rem;
+    }
+}
+
 .errorpage {
     margin-top: 20%;
     color: var(--yellow);
