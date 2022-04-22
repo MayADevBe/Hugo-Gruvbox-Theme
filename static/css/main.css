@@ -298,3 +298,31 @@ img {
     max-width: 100%;
     display: block;
 }
+
+aside{
+    border: 2px solid var(--fg4);
+    padding: 5px;
+    padding-left: 15px;
+    margin: 10px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+nav#TableOfContents{
+    border: 0px;
+    padding-bottom: 5px;
+}
+
+#TableOfContents ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#TableOfContents ul a + ul {
+    padding-left:1em;
+}
+
+#TableOfContents a{
+    color: var(--fg2);
+}

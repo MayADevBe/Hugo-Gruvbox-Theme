@@ -16,6 +16,7 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - Google Analytics
 - Post Sharing Button
 - Utterances Comments Feature support
+- TableOfContents styled
 
 ## Demo
 [View Website](https://mayadevbe.me/)
@@ -130,6 +131,12 @@ pygmentsCodefences = true
     lineNumbersInTable = true
     tabWidth = 4
     noClasses = false
+
+# Table of content depth and list type
+[markup.tableOfContents]
+  endLevel = 4
+  ordered = false
+  startLevel = 2
 
 #related config
 [related]
