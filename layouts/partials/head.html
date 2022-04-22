@@ -13,6 +13,10 @@
 	<title>{{ $title }} - {{ $siteTitle }}</title>
 	{{- end -}}
     
+	<meta name="description" content="{{ if .Params.Description }}{{ .Params.Description }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Blog{{ end }}" />
+	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}, {{ with .Params.keywords }}{{ delimit . ", "}}{{ end }}" />
+
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
