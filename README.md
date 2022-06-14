@@ -13,7 +13,7 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - Twitter cards + opengraph support
 - Hugo RSS feed
 - Reading Time of Posts
-- Google Analytics
+- Google Analytics (+ Simple Cookie Banner)
 - Post Sharing Button
 - Utterances Comments Feature support
 - TableOfContents styled
@@ -154,9 +154,16 @@ pygmentsCodefences = true
 
 ```
 
+### Simple Cookie Banner 
+- shows up when Google Analytics is used
+- because of DSGVO
+- contains link to privacy policy (BaseURL/privacypolicy)
+  - can be change in static/js/purecookie.js line 4: `purecookieLink`
+
 ## Credits
 - [Ezhil](https://github.com/vividvilla/ezhil)
 - [Gruvbox](https://github.com/morhetz/gruvbox)
 - [Feather Icons](https://feathericons.com/)
 - [Sharing Buttons](https://sharingbuttons.io/)
 - [Utterances](https://github.com/utterance/utterances)
+- [PureCookie - Cookie Consent Popup](https://www.cssscript.com/cookie-consent-popup-purecookie/)

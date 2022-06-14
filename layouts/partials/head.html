@@ -34,14 +34,15 @@
 
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	{{ $ga := .Site.Params.GoogleAnalytics }}
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ $ga }}');
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>
-
+	{{- if .Site.Params.GoogleAnalytics -}}
+		{{ $ga := .Site.Params.GoogleAnalytics }}
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{{ $ga }}');
+		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>          
+    {{- end -}}
 
 </head>

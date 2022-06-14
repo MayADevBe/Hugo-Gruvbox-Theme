@@ -5,6 +5,10 @@
     <body>
         <div class="container">
             {{ partial "header.html" . }}
+            
+            {{- if .Site.Params.GoogleAnalytics -}}
+                {{ partial "cookiebanner.html" . }}
+            {{- end -}}
 
             {{ with .Content }}{{ . }}{{ end }}
 
