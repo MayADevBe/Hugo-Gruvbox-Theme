@@ -326,3 +326,22 @@ nav#TableOfContents{
 #TableOfContents a{
     color: var(--fg2);
 }
+
+/* table */
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 0.3em solid var(--blue);
+    margin: auto;
+}
+
+thead {
+    border: 0.3em solid var(--blue);
+}
+
+th,
+td {
+    padding: 0.5em 1.5em;
+    border: 0.1em solid var(--blue);
+}
