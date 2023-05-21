@@ -37,12 +37,47 @@
 	{{- if .Site.Params.GoogleAnalytics -}}
 		{{ $ga := .Site.Params.GoogleAnalytics }}
 		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', '{{ $ga }}');
-		</script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>          
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    // Default ad_storage to 'denied' as a placeholder
+    // Determine actual values based on your own requirements
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      analytics_storage: "denied",
+    });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {{ $ga := .Site.Params.GoogleAnalytics }}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "{{ $ga }}");
+  </script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"
+  ></script>
+
+  <script>
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+	if (c.includes(nameEQ)){
+		gtag("consent", "update", {
+          ad_storage: "denied",
+          analytics_storage: "granted",
+        });
+	}
+    }
+  </script>         
     {{- end -}}
 
 </head>

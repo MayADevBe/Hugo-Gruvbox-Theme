@@ -1,9 +1,11 @@
 # Hugo-Gruvbox-Theme
+
 Simple personal blog/portfolio theme for Hugo.
 
 Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the colors from [Gruvbox](https://github.com/morhetz/gruvbox).
 
 ## Features
+
 - Gruvbox theme
 - Minimal
 - Responsive
@@ -19,26 +21,30 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - TableOfContents styled
 
 ## Demo
+
 [View Website](https://mayadevbe.me/)
 ![Screenshot](images/screenshot.PNG "Gruvebox Theme")
 
 [Erik Zaadis Blog](https://erikzaadi.com/) is now also using this theme.
 
 ## Installation
+
 - clone
-    From the Hugo-Site folder
-    ```
-    cd themes
-    git clone https://github.com/MayADevBe/Hugo-Gruvbox-Theme.git
-    ```
+  From the Hugo-Site folder
+  ```
+  cd themes
+  git clone https://github.com/MayADevBe/Hugo-Gruvbox-Theme.git
+  ```
 - download
-    Unzip into the 'themes' folder
+  Unzip into the 'themes' folder
 
 For more information checkout the [Hugo Installation Guide](https://gohugo.io/getting-started/installing/)
 
 ## Configuration
+
 - Put a favicon in 'static\ico\favicon.svg'
 - 'config.toml' example:
+
 ```toml
 
 baseURL = "http://example.com/"
@@ -154,13 +160,16 @@ pygmentsCodefences = true
 
 ```
 
-### Simple Cookie Banner 
+### Simple Cookie Banner
+
 - shows up when Google Analytics is used
 - because of DSGVO
 - contains link to privacy policy (BaseURL/privacypolicy)
   - can be change in static/js/purecookie.js line 4: `purecookieLink`
+  - adds google analytics consent in head.html
 
 ## Credits
+
 - [Ezhil](https://github.com/vividvilla/ezhil)
 - [Gruvbox](https://github.com/morhetz/gruvbox)
 - [Feather Icons](https://feathericons.com/)
