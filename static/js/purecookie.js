@@ -1,7 +1,7 @@
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
 var purecookieDesc = "By using this website, you automatically accept that we use cookies."; // Description
-var purecookieLink = '<a href="{{ .Site.BaseURL }}privacypolicy/" target="_blank">What for?</a>'; // Cookiepolicy link
+var purecookieLink = '<a href="privacypolicy/" target="_blank">What for?</a>'; // Cookiepolicy link
 var purecookieButton = "Okay"; // Button text
 // ---        --- //
 
