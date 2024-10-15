@@ -131,6 +131,10 @@ ul.flat li {
     color: var(--light-yellow)
 }
 
+.tag-cloud {
+    margin: 0% 3%;
+}
+
 .tag-cloud .tags a {
     display: inline-block;
     border: 1px solid var(--yellow);
