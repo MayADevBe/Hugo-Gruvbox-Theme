@@ -54,11 +54,12 @@ theme = "Hugo-Gruvbox-Theme"
 
 copyright = "© Copyright Notice"
 
-[author]
-  name = "Author Name"
+#For Pagination
+pagination.pagerSize = 5
 
-#Number of posts shown on index page
-paginate = 5
+[params.author]
+name = "Author Name"
+email = "authorname@gmail.com"
 
 [params]
     # Blog subtitle + For Twitter cards
