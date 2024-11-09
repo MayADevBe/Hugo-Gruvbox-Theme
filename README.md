@@ -38,6 +38,9 @@ Inspired by the [Ezhil](https://github.com/vividvilla/ezhil) theme and with the 
 - download
   Unzip into the 'themes' folder
 
+- optional: in the layouts folder configure the 'robots.txt' file
+(default allows all user-agents and no disallows, but no sitemap link)
+
 For more information checkout the [Hugo Installation Guide](https://gohugo.io/getting-started/installing/)
 
 ## Configuration
@@ -56,6 +59,8 @@ copyright = "© Copyright Notice"
 
 #For Pagination
 pagination.pagerSize = 5
+
+enableRobotsTXT = true
 
 [params.author]
 name = "Author Name"
